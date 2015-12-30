@@ -10,8 +10,8 @@ Email substack@gmail.com to say hello!
 
 I will fly to wherever you are, anywhere in the world!
 
-The base price is 2000 USD and 1000 USD for each additional day of
-instruction plus airfare, visa fees, and no-frills accomodation.
+The base price is 2000 USD for the first day and 1000 USD for each additional
+day of instruction plus airfare, visa fees, and no-frills accomodation.
 
 For 2 days of hands-on instruction for a class of 20, that works to less than
 200 USD per student, depending on airfare and visa fees.
