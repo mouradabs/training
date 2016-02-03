@@ -6,6 +6,10 @@ data replication?
 
 Email substack@gmail.com to say hello!
 
+I can also provide [live and comissioned algorithmic music][1]
+
+[1]: https://github.com/substack/music-for-hire
+
 # pricing
 
 I will fly to wherever you are, anywhere in the world!
