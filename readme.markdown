@@ -31,7 +31,7 @@ Participants should come with their own computer running a unix environment
 (Linux or Mac OSX preferred) with the latest stable versions of node and npm
 installed.
 
-The venue should have a ample power outlets, wifi, seating, and projector or
+The venue should have ample power outlets, wifi, seating, and projector or
 computer monitor with a VGA or HDMI port that everyone can see.
 
 ## introduction to modules
