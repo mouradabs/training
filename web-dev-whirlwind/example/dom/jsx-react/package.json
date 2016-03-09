@@ -1,0 +1,11 @@
+{
+  "scripts": {
+    "build": "browserify main.js -o bundle.js",
+    "watch": "watchify main.js -o bundle.js -v -d"
+  },
+  "browserify": {
+    "transform": [
+      ["babelify",{"presets":["es2015","react"]}]
+    ]
+  }
+}
