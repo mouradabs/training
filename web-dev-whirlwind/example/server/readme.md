@@ -8,6 +8,8 @@ Here are some example servers programs using some useful tiny modules:
 [ecstatic][]
 * [form.js][] - parse form data with [body][]
 * [form-routes-files.js][] - parse form data, routing, and static files
+* [static-argv][] - static files with [ecstatic][] and option parsing with
+[minimist][]
 
 # modules
 
@@ -123,6 +125,12 @@ Simple modules like [routes][] are not coupled to any node-specific APIs or
 system I/O, so they work great in the browser too! This will come in handy later
 when we will build more complicated universal architectures.
 
+## minimist
+
+Finally, we might need to parse some options in our server.
+
+We can use [minimist][]
+
 ---
 
 [static-file-server.js]: static-file-server.js
@@ -130,6 +138,7 @@ when we will build more complicated universal architectures.
 [routes-and-files.js]: routes-and-files.js
 [form.js]: form.js
 [form-routes-files.js]: form.js
+[static-argv.js]: static-argv.js
 [ecstatic]: https://npmjs.com/package/ecstatic
 [routes]: https://npmjs.com/package/routes
 [body]: https://npmjs.com/package/body
@@ -138,4 +147,4 @@ when we will build more complicated universal architectures.
 [response object]: https://nodejs.org/api/http.html#http_class_http_serverresponse
 [readable stream]: https://nodejs.org/api/stream.html#stream_class_stream_readable
 [writable stream]: https://nodejs.org/api/stream.html#stream_class_stream_writable
-
+[minimist]: https://npmjs.com/package/minimist
