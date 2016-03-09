@@ -11,6 +11,7 @@
     "chloride": "^2.0.1",
     "concat-stream": "^1.5.1",
     "content-addressable-blob-store": "^4.3.0",
+    "deep-extend": "^0.4.1",
     "drag-and-drop-files": "0.0.1",
     "ecstatic": "^1.4.0",
     "electron-spawn": "^4.1.1",
