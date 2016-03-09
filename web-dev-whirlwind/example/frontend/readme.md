@@ -232,3 +232,30 @@ server, you should see the message `Hello server, this is the browser.` printed
 to stdout.
 
 [xhr]: https://npmjs.com/package/xhr
+
+# url
+
+With browserify, we have access to many node builtin modules and platform
+globals like [path][], [querystring][], [buffer][], [events][], [util][],
+[crypto][], [stream][], and [url][].
+
+In this example, we'll use the built-in [url][] module to compute the full url
+relative to the current location using `url.resolve()`:
+
+```
+var url = require('url')
+console.log(url.resolve(location.href, 'hello.txt'))
+```
+
+We could combine this `url.resolve()` code with the previous example using
+[xhr][] to fetch a file by its relative URL.
+
+[path]: https://nodejs.org/api/path.html
+[querystring]: https://nodejs.org/api/querystring.html
+[buffer]: https://nodejs.org/api/buffer.html
+[events]: https://nodejs.org/api/events.html
+[util]: https://nodejs.org/api/util.html
+[crypto]: https://nodejs.org/api/crypto.html
+[stream]: https://nodejs.org/api/stream.html
+[url]: https://nodejs.org/api/url.html
+
