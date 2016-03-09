@@ -30,7 +30,7 @@ here is a rough outline:
 09:00 - introductions, modularity
 09:30 - [simple servers](example/server)
 10:00 - [frontend modules and build scripts](example/frontend)
-10:30 - templating, assets
+10:30 - [templating, assets, virtual dom](example/dom)
 11:00 - websockets, webrtc
 12:00 ? lunch!
 13:00 - frontend architecture
