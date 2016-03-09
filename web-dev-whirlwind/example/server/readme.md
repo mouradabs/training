@@ -129,7 +129,20 @@ when we will build more complicated universal architectures.
 
 Finally, we might need to parse some options in our server.
 
-We can use [minimist][]
+We can use [minimist][]:
+
+``` js
+var minimist = require('minimist')
+var argv = minimist(process.argv.slice(2))
+console.log(argv)
+```
+
+to turn command-line options into an object we can manipulate:
+
+```
+$ node cmd.js --port=5000 --staticdir=public
+{ _: [], port: 5000, staticdir: 'public' }
+```
 
 ---
 
