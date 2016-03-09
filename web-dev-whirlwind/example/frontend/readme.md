@@ -242,13 +242,101 @@ globals like [path][], [querystring][], [buffer][], [events][], [util][],
 In this example, we'll use the built-in [url][] module to compute the full url
 relative to the current location using `url.resolve()`:
 
-```
+``` js
 var url = require('url')
 console.log(url.resolve(location.href, 'hello.txt'))
 ```
 
 We could combine this `url.resolve()` code with the previous example using
 [xhr][] to fetch a file by its relative URL.
+
+# drag and drop files
+
+For this example, we can drop an image file onto our web page and display its
+contents in an `<img>` tag. We can combine 4 modules to perform this task:
+
+* [drag-and-drop-files][]
+* [filereader-stream][]
+* [concat-stream][]
+* [path][]
+
+---
+
+The [drag-and-drop-files][] module will let us register a callback that fires
+with an array of file objects when somebody drops some files onto the browser
+from their operating system:
+
+``` js
+var dragDrop = require('drag-and-drop-files')
+dragDrop(window, function (files) {
+  // ...
+})
+```
+
+---
+
+For each file in the array of files, we can create a readable stream of file
+contents:
+
+``` js
+var fileReader = require('filereader-stream')
+var dragDrop = require('drag-and-drop-files')
+dragDrop(window, function (files) {
+  files.forEach(function (file) {
+    fileReader(file) /* ... */
+  })
+})
+```
+
+---
+
+We can pipe these files into `concat-stream` to collect up the whole file into a
+[buffer][]:
+
+``` js
+var dragDrop = require('drag-and-drop-files')
+var fileReader = require('filereader-stream')
+var concat = require('concat-stream')
+
+dragDrop(window, function (files) {
+  files.forEach(function (file) {
+    fileReader(file).pipe(concat({ encoding: 'buffer' }, function (buf) {
+      // ...
+    }))
+  })
+})
+```
+
+---
+
+Finally, we can create an `<img>` element using `document.createElement('img')`
+and we can use the dropped file contents to construct an inline
+[base64-encoded data URI][data-uri] to use as the `<img>`'s `src` attribute.
+
+We can use `path.extname()` to parse the file extension and slice off the
+leading `'.'` character.
+
+Once the img tag is created, we can append it to the `document.body`:
+
+``` js
+var dragDrop = require('drag-and-drop-files')
+var fileReader = require('filereader-stream')
+var concat = require('concat-stream')
+var path = require('path')
+
+dragDrop(window, function (files) {
+  files.forEach(function (file) {
+    fileReader(file).pipe(concat({ encoding: 'buffer' }, function (buf) {
+      var ext = path.extname(file.name).slice(1)
+      if (ext === 'svg') ext = 'svg+xml'
+      var img = document.createElement('img')
+      var src = 'data:image/' + ext + ';base64,' + buf.toString('base64')
+      img.setAttribute('src', src)
+      document.body.appendChild(img)
+    }))
+  })
+})
+```
 
 [path]: https://nodejs.org/api/path.html
 [querystring]: https://nodejs.org/api/querystring.html
@@ -258,4 +346,8 @@ We could combine this `url.resolve()` code with the previous example using
 [crypto]: https://nodejs.org/api/crypto.html
 [stream]: https://nodejs.org/api/stream.html
 [url]: https://nodejs.org/api/url.html
+[drag-and-drop-files]: https://npmjs.com/package/drag-and-drop-files
+[filereader-stream]: https://npmjs.com/package/filereader-stream
+[concat-stream]: https://npmjs.com/package/concat-stream
+[data-uri]: https://en.wikipedia.org/wiki/Data_URI_scheme
 
