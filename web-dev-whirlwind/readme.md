@@ -28,8 +28,8 @@ here is a rough outline:
 ```
 08:00 - breakfast!
 09:00 - introductions, modularity
-09:30 - simple servers
-10:00 - frontend modules and build scripts
+09:30 - [simple servers](example/server)
+10:00 - [frontend modules and build scripts](example/frontend)
 10:30 - templating, assets
 11:00 - websockets, webrtc
 12:00 ? lunch!

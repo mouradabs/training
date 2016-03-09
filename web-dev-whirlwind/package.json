@@ -41,6 +41,7 @@
     "svg-create-element": "^1.0.0",
     "swarmlog": "^1.4.0",
     "through2": "^2.0.1",
+    "uniq": "^1.0.1",
     "virtual-dom": "^2.1.1",
     "virtual-hyperscript-svg": "^2.0.0",
     "watchify": "^3.7.0",
