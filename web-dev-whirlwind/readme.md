@@ -67,7 +67,6 @@ Here are some of the modules and tools we will use and cover:
 * [concat-stream](https://npmjs.com/package/concat-stream)
 * [insert-css](https://npmjs.com/package/insert-css)
 * [brfs](https://npmjs.com/package/brfs)
-* [morphdom](https://npmjs.com/package/morphdom)
 * [virtual-dom](https://npmjs.com/package/virtual-dom)
 * [main-loop](https://npmjs.com/package/main-loop)
 * [react](https://npmjs.com/package/react)
