@@ -140,7 +140,30 @@ function render (state) {
 `render(state)` function, and an object with `patch()`, `diff()`, and
 `createElement()` methods like what `require('virtual-dom')` provides.
 
-We can use the `h()`
+We can use the `h()` function to create a virtual dom tree by nesting
+expressions. The format of `h()` is:
+
+```
+h(tagName, attrs, children)
+```
+
+where `tagName` is a string html element name, `attrs` is an object mapping html
+attribute keys to values, and `children` is an array of child virtual dom nodes
+and strings under the current element.
+
+To register event listeners, we use key names like `onclick` or `onsubmit` in
+`attrs` with function values.
+
+To change what you see on the page, call `loop.update(newState)` with the new
+value you want to use for state. The `render` function is called every time the
+state is updated and the tree is generated again. All the data your app needs to
+generate the virtual dom tree should live in the `state`.
+
+This reactive architecture is a very handy pattern because you can focus on
+constructing your DOM tree and you can let libraries focus on calling the
+appropriate DOM manipulations under the hood in a performant way. All the
+display logic is driven by explicit state transitions and organized into a
+single place, so you don't need to worry as much about writing spaghetti code.
 
 [virtual-dom]: https://npmjs.com/package/virtual-dom
 [main-loop]: https://npmjs.com/package/main-loop
