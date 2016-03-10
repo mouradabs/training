@@ -18,8 +18,7 @@ var server = http.createServer(function (req, res) {
     read('index.html').pipe(hyperstream({
       '#content': elem.toString()
     })).pipe(res)
-  }
-  else st(req, res)
+  } else st(req, res)
 })
 server.listen(8000)
 
