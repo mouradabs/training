@@ -9,13 +9,13 @@ server.listen(5000)
 var wsock = require('websocket-stream')
 var split = require('split2')
 var through = require('through2')
-var onend = require('end-of-stream')
-
 wsock.createServer({ server: server }, function (stream) {
-  stream.pipe(process.stdout)
-  var i = 0
-  var iv = setInterval(function () {
-    stream.write('HELLO ' + (i++) + '\n')
-  }, 1000)
-  onend(stream, function () { clearInterval(iv) })
+  stream
+    .pipe(split())
+    .pipe(through(uppercaser))
+    .pipe(stream)
+
+  function uppercaser (buf, enc, next) {
+    next(null, buf.toString().toUpperCase() + '\n')
+  }
 })
