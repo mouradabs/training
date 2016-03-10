@@ -25,21 +25,30 @@ I'm here to introduce new ideas and to help you get unstuck!
 There are not exact times and we may shuffle topics around based on demand, but
 here is a rough outline:
 
-```
 08:00 - breakfast!
+
 09:00 - introductions, modularity
+
 09:30 - [simple servers](example/server)
+
 10:00 - [frontend modules and build scripts](example/frontend)
+
 10:30 - [templating, assets, virtual dom](example/dom)
+
 11:00 - [websockets, webrtc](example/webcom)
+
 12:00 ? lunch!
+
 13:00 - [frontend architecture, universal rendering](example/arch)
+
 14:00 - [browser database](example/db)
+
 14:30 - [svg](example/svg)
+
 15:00-16:30 : topic requests (offline, webgl, p2p, webtorrent,
   algorithmic music, crypto, whatever!)
+
 16:30 - wrapping up, presentations
-```
 
 ---
 # modules
