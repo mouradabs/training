@@ -1,0 +1,7 @@
+{
+  "scripts": {
+    "start": "node server.js",
+    "build": "browserify main.js -o public/bundle.js",
+    "watch": "watchify main.js -o public/bundle.js -dv"
+  }
+}
