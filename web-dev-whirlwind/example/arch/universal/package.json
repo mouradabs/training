@@ -1,0 +1,22 @@
+{
+  "name": "virtual-dom-universal-starter",
+  "scripts": {
+    "build": "browserify main.js | uglifyjs -cm > public/bundle.js",
+    "start": "node server.js",
+    "watch": "watchify main.js -o public/bundle.js -dv"
+  },
+  "dependencies": {
+    "browserify": "^11.0.1",
+    "catch-links": "^2.0.0",
+    "ecstatic": "~0.8.0",
+    "hyperstream": "^1.2.2",
+    "main-loop": "^3.1.0",
+    "routes": "^2.1.0",
+    "single-page": "^1.0.0",
+    "uglifyjs": "~2.4.10",
+    "virtual-dom": "~2.0.1",
+    "watchify": "^3.3.1",
+    "xtend": "^4.0.0"
+  },
+  "license": "public domain"
+}

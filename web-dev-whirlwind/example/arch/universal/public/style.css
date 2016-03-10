@@ -1,0 +1,22 @@
+.links a {
+  display: inline-block;
+  width: 15ex;
+  padding: 10px;
+  text-align: center;
+  background-color: purple;
+  color: cyan;
+}
+
+.links a:hover {
+  background-color: cyan;
+  color: purple;
+}
+
+.links a.active {
+  background-color: magenta;
+  color: purple;
+}
+
+.links {
+  margin-bottom: 1em;
+}
