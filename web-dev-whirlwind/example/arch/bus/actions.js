@@ -11,12 +11,4 @@ module.exports = function (bus, loop) {
     items.splice(index, 1)
     loop.update(xtend(loop.state, { items: items }))
   })
-  bus.on('update-item', function (olditem, newitem) {
-    loop.update(xtend(loop.state, {
-      items: loop.state.items.map(function (name) {
-        if (name === olditem) return newitem
-        else return name
-      })
-    }))
-  })
 }

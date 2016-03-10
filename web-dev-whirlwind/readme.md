@@ -34,8 +34,8 @@ here is a rough outline:
 11:00 - [websockets, webrtc](example/webcom)
 12:00 ? lunch!
 13:00 - [frontend architecture, universal rendering](example/arch)
-14:00 - browser database
-14:30 - svg
+14:00 - [browser database](example/db)
+14:30 - [svg](example/svg)
 15:00-16:30 : topic requests (offline, webgl, p2p, webtorrent,
   algorithmic music, crypto, whatever!)
 16:30 - wrapping up, presentations
