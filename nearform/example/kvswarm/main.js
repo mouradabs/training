@@ -7,6 +7,12 @@ var db = level('log')
 var log = hyperlog(db, { valueEncoding: 'json' })
 var kv = hyperkv({ db: level('index'), log: log })
 
+log.createReadStream({ live: true })
+  .on('data', function (row) {
+    if (!row.value) return
+    console.log('KV', row.value.k, '=>', row.value.v)
+  })
+
 var wswarm = require('webrtc-swarm')
 var signalhub = require('signalhub')
 var onend = require('end-of-stream')
