@@ -7,6 +7,7 @@
     "chloride": "^2.1.1",
     "concat-stream": "^1.5.1",
     "ecstatic": "^1.4.1",
+    "end-of-stream": "^1.1.0",
     "hypercore": "^2.3.0",
     "hyperdrive": "^5.1.5",
     "hyperkv": "^1.7.0",
