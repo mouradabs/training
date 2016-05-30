@@ -60,6 +60,7 @@ function render (state) {
     ev.preventDefault()
     var msg = this.elements.msg.value
     var id = randombytes(8).toString('hex')
+    seen[id] = true
     Object.keys(streams).forEach(function (key) {
       streams[key].write(id + ',' + msg + '\n')
     })
