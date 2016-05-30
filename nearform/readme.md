@@ -13,42 +13,37 @@ Nearform HQ, Tramore, Ireland
 
 We will have short lectures throughout the day on various topics.
 
-Between the presentations, you the participant should experiment with the topics and
-tools covered in the lectures and should think up a new or existing project to
-hack on and get help with throughout the day.
+Between the presentations, you the participant should experiment
+with the topics and tools covered in the lectures and should
+think up a new or existing project to hack on and get help with
+throughout the day.
 
 I'm here to introduce new ideas and to help you get unstuck!
 
 ---
 # schedule
 
-There are not exact times and we may shuffle topics around based on demand, but
-here is a rough outline:
+There are not exact times and we may shuffle topics around based
+on demand, but here is a rough outline:
 
+```
 09:30 - introductions, modularity
-
 10:00 - simple servers
-
 10:30 - frontend modules and build scripts
-
 11:00 - websockets, webrtc
-
 11:30 - frontend architecture, universal rendering
-
 13:00 ? lunch!
-
 14:00 - kappa architecture
-
 14:30 - data replication
-
 15:00-?? : topic requests! tests, offline, webgl, crypto, whatever!
-
 ?? - wrapping up, presentations
+```
 
 ---
 # modules
 
-Before you show up, you might want to download all the modules we'll be using:
+Before you show up, you might want to download all the modules
+we'll be using:
 
 ```
 $ npm init -y && npm install -S yo-yo xhr browserify watchify \
