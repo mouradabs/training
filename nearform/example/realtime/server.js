@@ -6,7 +6,7 @@ var onend = require('end-of-stream')
 var server = http.createServer(function (req, res) {
   st(req, res)
 })
-server.listen(5000)
+server.listen(5001)
 
 var streams = []
 var wsock = require('websocket-stream')

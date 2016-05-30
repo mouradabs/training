@@ -35,11 +35,11 @@ based on demand, but here is a rough outline:
 10:30 - simple servers
 11:00 - frontend modules and build scripts
 11:30 - websockets, webrtc
-12:00 - frontend architecture, universal rendering
 13:00 ? lunch!
-14:00 - kappa architecture
-14:30 - data replication
-15:00-?? : topic requests! tests, offline, webgl, crypto,
+14:00 - frontend architecture, universal rendering
+14:30 - kappa architecture
+15:00 - data replication
+15:30-?? : topic requests! tests, offline, webgl, crypto,
   whatever!
 ?? - wrapping up, presentations
 ```
