@@ -8,6 +8,8 @@ topics:
 Monday, May 30, 2016
 Nearform HQ, Tramore, Ireland
 
+https://github.com/substack/training/tree/master/nearform
+
 ---
 # the format
 
@@ -29,11 +31,11 @@ There are not exact times and we may shuffle topics around
 based on demand, but here is a rough outline:
 
 ```
-09:30 - introductions, modularity
-10:00 - simple servers
-10:30 - frontend modules and build scripts
-11:00 - websockets, webrtc
-11:30 - frontend architecture, universal rendering
+10:00 - introductions, modularity
+10:30 - simple servers
+11:00 - frontend modules and build scripts
+11:30 - websockets, webrtc
+12:00 - frontend architecture, universal rendering
 13:00 ? lunch!
 14:00 - kappa architecture
 14:30 - data replication
