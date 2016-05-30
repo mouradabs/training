@@ -4,9 +4,12 @@
     "watch": "watchify main.js -o public/bundle.js -dv"
   },
   "browserify": {
-    "transform": ["brfs"]
+    "transform": [
+      "brfs"
+    ]
   },
   "dependencies": {
+    "hyperscript": "^1.4.7",
     "strftime": "^0.9.2"
   }
 }
