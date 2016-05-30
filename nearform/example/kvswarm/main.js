@@ -13,10 +13,13 @@ var onend = require('end-of-stream')
 var swarm = wswarm(signalhub('kv-demo', [
   'https://signalhub.mafintosh.com'
 ]))
+var peers = {}
 swarm.on('peer', function (peer, id) {
   console.log('PEER CONNECTED', id)
-  peer.pipe(log.replicate({ live: true })).pipe(peer)
+  peers[id] = peer
+  peer.pipe(log.replicate()).pipe(peer)
   onend(peer, function () {
+    delete peers[id]
     console.log('PEER DISCONNECTED', id)
   })
 })
@@ -59,6 +62,10 @@ function render (state) {
     var value = this.elements.value.value
     kv.put(key, value, function (err, node) {
       console.log('onput', err, node)
+      Object.keys(peers).forEach(function (key) {
+        var peer = peers[key]
+        peer.pipe(log.replicate()).pipe(peer)
+      })
     })
   }
 }
