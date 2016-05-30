@@ -16,6 +16,7 @@
     "level": "^1.4.0",
     "level-browserify": "^1.1.0",
     "react": "^15.0.2",
+    "routes": "^2.1.0",
     "signalhub": "^4.3.2",
     "simple-peer": "^6.0.3",
     "single-page": "^1.1.0",
