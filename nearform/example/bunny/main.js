@@ -1,7 +1,8 @@
 var regl = require('regl')()
 var mat4 = require('gl-mat4')
 var cubeMesh = require('cube-mesh')
-var mesh = cubeMesh(1)
+var cube = cubeMesh(1)
+var bunny = require('bunny')
 
 var cubes = []
 for (var i = 0; i < 80; i++) cubes.push(createCube())
@@ -25,6 +26,15 @@ regl.frame(function (count) {
 })
 
 function createCube () {
+  var mesh, scale
+  if (Math.random() > 0.5) {
+    mesh = cube
+    scale = 1
+  } else {
+    mesh = bunny
+    scale = 0.1
+  }
+
   var pos = [
     1/(2*Math.random()-1),
     1/(2*Math.random()-1),
@@ -46,8 +56,8 @@ function createCube () {
       void main () {
         gl_FragColor = vec4(
           sin(pos.z+cos(pos.y)),
-          sin(pos.x),
-          cos(pos.y),
+          sin(pos.x + cos(pos.y*2.0 + pos.x*3.0)*4.0),
+          cos(pos.y+pos.x*4.0+sin(pos.x*pos.y/40.0)),
           1
         );
       }
@@ -59,15 +69,17 @@ function createCube () {
       uniform mat4 view;
 
       attribute vec3 position;
+      attribute float mscale;
       varying vec3 pos;
 
       void main () {
-        gl_Position = proj*model*view * vec4(position, 1.0);
+        gl_Position = proj*model*view * vec4(mscale*position, 1.0);
         pos = position;
       }
     `,
     attributes: {
-      position: regl.buffer(mesh.positions)
+      position: regl.buffer(mesh.positions),
+      mscale: scale
     },
     elements: regl.elements(mesh.cells),
     uniforms: {
