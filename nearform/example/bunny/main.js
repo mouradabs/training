@@ -3,6 +3,7 @@ var mat4 = require('gl-mat4')
 var cubeMesh = require('cube-mesh')
 var cube = cubeMesh(1)
 var bunny = require('bunny')
+var teapot = require('teapot')
 
 var cubes = []
 for (var i = 0; i < 80; i++) cubes.push(createCube())
@@ -27,9 +28,13 @@ regl.frame(function (count) {
 
 function createCube () {
   var mesh, scale
-  if (Math.random() > 0.5) {
+  var r = Math.random()
+  if (r > 0.6) {
     mesh = cube
     scale = 1
+  } else if (r > 0.3) {
+    mesh = teapot
+    scale = 0.1
   } else {
     mesh = bunny
     scale = 0.1
