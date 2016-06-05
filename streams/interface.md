@@ -74,7 +74,19 @@ You're dealing with a duplex stream `a`.
 A transform stream would loop forever.
 
 ---
-# other
+# objectMode
+
+All the core APIs deal with strings or buffers as input and output types.
+
+However, by passing `{ objectMode: true }`, streams can be made to handle
+objects too, with backpressure.
+
+This is particularly useful when you have a parser and want your handler that
+deals with the parsed objects to factor into the backpressure upstream all the
+way to the transport.
+
+---
+# events
 
 streams are event emitters:
 
