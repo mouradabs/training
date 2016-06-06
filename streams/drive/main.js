@@ -6,6 +6,7 @@ var concat = require('concat-stream')
 var db = level('drive2.db')
 var info = sub(db, 'info')
 var html = require('yo-yo')
+var wsock = require('websocket-stream')
 var root = document.querySelector('#content')
 
 var state = { files: [] }
@@ -31,8 +32,13 @@ function list () {
 function update () {
   html.update(root, html`<div>
     <form onsubmit=${onsubmit}>
-      <input type="text" name="filename">
+      file=<input type="text" name="filename">
       <div><textarea name="contents"></textarea></div>
+      <button type="submit">submit</button>
+    </form>
+    <form onsubmit=${replicate}>
+      <input type="text" name="href">
+      <button type="submit">replicate</button>
     </form>
     ${state.files.map(function (file) {
       return html`<div><a onclick=${show}>${file.name}</a></div>`
@@ -52,5 +58,13 @@ function update () {
     var stream = archive.createFileWriteStream(file)
     stream.on('finish', list)
     stream.end(this.elements.contents.value)
+  }
+  function replicate (ev) {
+    ev.preventDefault()
+    var href = this.elements.href.value
+    var stream = wsock(href)
+    var r = archive.replicate()
+    stream.pipe(r).pipe(stream)
+    r.on('finish', list)
   }
 }
