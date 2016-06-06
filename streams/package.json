@@ -28,6 +28,7 @@
     "read-only-stream": "^2.0.0",
     "readable-stream": "^2.1.4",
     "rpc-stream": "^2.1.2",
+    "signalhub": "^4.3.2",
     "simple-peer": "^6.0.3",
     "split2": "^2.0.1",
     "stream-each": "^1.1.0",
