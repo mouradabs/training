@@ -5,6 +5,7 @@
     "csv-parser": "^1.9.1",
     "drag-and-drop-files": "0.0.1",
     "duplexify": "^3.4.3",
+    "ecstatic": "^1.4.1",
     "end-of-stream": "^1.1.0",
     "filereader-stream": "^1.0.0",
     "flush-write-stream": "^1.0.0",
