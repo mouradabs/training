@@ -41,3 +41,11 @@ based on demand, but here is a rough outline:
 17:00 - data replication
 17:30 - EOF
 ```
+
+---
+# homework
+
+```
+$ npm install -g stream-adventure
+$ stream-adventure
+```
