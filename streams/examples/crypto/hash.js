@@ -1,3 +1,4 @@
 var crypto = require('crypto')
-process.stdin.pipe(crypto.createHash('sha512'))
-  .pipe(process.stdout)
+var h = crypto.createHash('sha512')
+h.setEncoding('hex')
+process.stdin.pipe(h).pipe(process.stdout)

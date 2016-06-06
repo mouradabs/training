@@ -31,6 +31,7 @@
     "to2": "^1.0.0",
     "webrtc-swarm": "^2.4.0",
     "websocket-stream": "^3.1.0",
-    "write-only-stream": "^1.1.0"
+    "write-only-stream": "^1.1.0",
+    "yo-yo": "^1.2.0"
   }
 }
