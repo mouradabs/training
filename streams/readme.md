@@ -49,3 +49,7 @@ based on demand, but here is a rough outline:
 $ npm install -g stream-adventure
 $ stream-adventure
 ```
+
+more reading:
+
+https://github.com/substack/stream-handbook
