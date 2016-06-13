@@ -8,6 +8,7 @@ server.listen(5000)
 
 var wsock = require('websocket-stream')
 wsock.createServer({ server: server }, function (stream) {
-  stream.write('hello!\n')
-  stream.pipe(stream)
+  stream.write('{"n":5}\n')
+  stream.write('{"n":6}\n')
+  stream.write('{"n":10}\n')
 })
