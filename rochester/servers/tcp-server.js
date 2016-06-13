@@ -3,4 +3,4 @@ var server = net.createServer(function (stream) {
   stream.write('HELLO!\n')
   stream.pipe(stream)
 })
-server.listen(5001)
+server.listen(process.argv[2] || 5001)
