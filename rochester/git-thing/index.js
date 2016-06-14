@@ -23,6 +23,14 @@ Git.prototype.history = function () {
     if (/^commit/.test(line)) {
       if (commit) this.push(commit)
       commit = { hash: line.split(/\s+/)[1] }
+    } else if (/^Author: /.test(line)) {
+      var m = /^Author: (.+) <(.*?)>/.exec(line)
+      if (!m) return next(
+        new Error('unexpectedly formatted author field'))
+      commit.author = {
+        name: m[1],
+        email: m[2]
+      }
     }
     next()
   }
