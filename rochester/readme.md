@@ -47,17 +47,16 @@ unstuck!
 # day 1
 
 ```
-10:00 -
-11:00 - 
-11:30 - 
-12:00 - streaming parsers
-12:30 - multiplex, rpc
+10:30 - introduction to tape
+11:00 - test suite from the ground up
+12:00 - testing workflows
+12:30 - code coverage
 13:00 ? lunch!
-14:00 - unit testing
-14:30 - advanced testing tricks
-15:00 - contributor testing workflows
-15:30 - code coverage
-16:00-?? - open for topic requests
+14:00 - streaming parsers
+14:30 - multiplex, rpc
+15:00 - 
+15:30 - 
+16:00-?? -
 ```
 
 ---
