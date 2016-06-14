@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "csv-parser": "^1.9.1",
+    "through2": "^2.0.1",
+    "to2": "^1.0.0"
+  }
+}
