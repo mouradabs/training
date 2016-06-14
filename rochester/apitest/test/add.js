@@ -1,6 +1,6 @@
 var test = require('tape')
 var request = require('request')
-var href = 'http://localhost:5000'
+var href = 'http://localhost:' + PORT
 
 var token = null
 test('setup', function (t) {
