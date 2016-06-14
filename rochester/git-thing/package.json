@@ -1,0 +1,16 @@
+{
+  "name": "git-thing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "santa claus",
+  "license": "ISC",
+  "dependencies": {
+    "read-only-stream": "^2.0.0",
+    "split2": "^2.1.0",
+    "through2": "^2.0.1"
+  }
+}
