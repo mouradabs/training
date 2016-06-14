@@ -7,7 +7,7 @@ test('author in the history', function (t) {
   var git = Git()
   collect(git.history(), function (err, commits) {
     t.error(err)
-    var lastAuthor = commits[commits.length-1].author
+    var lastAuthor = commits[commits.length - 1].author
     t.deepEqual(lastAuthor, {
       name: 'James Halliday',
       email: 'mail@substack.net'

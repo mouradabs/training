@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "tape test/*.js"
+    "test": "standard && tape test/*.js",
+    "lint": "standard",
+    "cover": "nyc tape test/*.js && nyc check-coverage"
   },
   "author": "santa claus",
   "license": "ISC",
@@ -12,5 +14,10 @@
     "read-only-stream": "^2.0.0",
     "split2": "^2.1.0",
     "through2": "^2.0.1"
+  },
+  "devDependencies": {
+    "nyc": "^6.4.4",
+    "standard": "^7.1.2",
+    "tape": "^4.2.0"
   }
 }

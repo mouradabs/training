@@ -7,7 +7,7 @@ test('history', function (t) {
   var git = Git()
   collect(git.history(), function (err, commits) {
     t.error(err)
-    var lastHash = commits[commits.length-1].hash
+    var lastHash = commits[commits.length - 1].hash
     t.equal(lastHash, 'c18b91270ff64353d215ce5c4d8c75fffb27f63e',
       'last hash')
   })

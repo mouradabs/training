@@ -11,6 +11,11 @@ function Git (opts) {
   this.cwd = opts.cwd || process.cwd()
 }
 
+Git.prototype.show = function (file, hash) {
+  var ps = proc.spawn('git', ['show', hash + file])
+  return ps.stdout
+}
+
 Git.prototype.history = function () {
   var ps = proc.spawn('git', ['log'])
   var stream = through.obj(write, end)
@@ -25,8 +30,9 @@ Git.prototype.history = function () {
       commit = { hash: line.split(/\s+/)[1] }
     } else if (/^Author: /.test(line)) {
       var m = /^Author: (.+) <(.*?)>/.exec(line)
-      if (!m) return next(
-        new Error('unexpectedly formatted author field'))
+      if (!m) {
+        return next(new Error('unexpectedly formatted author field'))
+      }
       commit.author = {
         name: m[1],
         email: m[2]
