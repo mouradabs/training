@@ -31,12 +31,3 @@ Git.prototype.history = function () {
     next()
   }
 }
-
-
-
-
-
-
-
-
-
