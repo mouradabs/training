@@ -9,6 +9,10 @@ var server = http.createServer(function (req, res) {
     var token = randombytes(8).toString('hex')
     tokens[token] = true
     res.end(token)
+  } else if (req.url === '/clear') {
+    if (check()) return
+    elements = []
+    res.end('ok\n')
   } else if (req.url === '/list') {
     if (check()) return
     res.end(elements.join('\n'))
