@@ -46,3 +46,15 @@ test('get a list of the added records', function (t) {
     t.deepEqual(lines, expected, 'expected values in the list')
   })
 })
+
+test('teardown', function (t) {
+  var opts = {
+    url: href + '/clear',
+    headers: { token: token }
+  }
+  request(opts, function (err, res, body) {
+    t.error(err)
+    t.equal(body.toString(), 'ok\n')
+    t.end()
+  })
+})
