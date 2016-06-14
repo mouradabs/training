@@ -2,5 +2,12 @@
   "scripts": {
     "build": "browserify main.js | uglifyjs -cm > public/bundle.js",
     "watch": "watchify main.js -o public/bundle.js -dv"
+  },
+  "dependencies": {
+    "ecstatic": "^1.4.1",
+    "end-of-stream": "^1.1.0",
+    "split2": "^2.1.0",
+    "to2": "^1.0.0",
+    "websocket-stream": "^3.1.0"
   }
 }
