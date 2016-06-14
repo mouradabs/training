@@ -1,0 +1,5 @@
+bundle.js
+node_modules
+scratch
+*.db
+.nyc_output
