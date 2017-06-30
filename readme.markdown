@@ -13,6 +13,7 @@ I can also provide [live and comissioned algorithmic music][1]
 # pricing
 
 I will fly to wherever you are, anywhere in the world!
+The nearest airport to me is Hilo, Hawai`i.
 
 The base price is 2000 USD for the first day and 1000 USD for each additional
 day of instruction plus airfare, visa fees, and no-frills accomodation.
